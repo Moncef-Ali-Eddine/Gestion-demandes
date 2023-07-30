@@ -66,7 +66,7 @@ namespace Test
 
                     string req = ("update admin_log set password=@p1 where nom_utilisateur=@id");
                     SqlCommand cmd = new SqlCommand(req, con);
-                    // les commandes sont toujours avant le con.open
+                    // les demandes sont toujours avant le con.open
                     cmd.Parameters.AddWithValue("@p1", txt_pass.Text.ToString());
                     cmd.Parameters.AddWithValue("@id", txt_name.Text.ToString());
                     con.Open();
@@ -81,6 +81,21 @@ namespace Test
 
                 }
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

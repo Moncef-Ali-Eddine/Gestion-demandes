@@ -69,11 +69,23 @@
     <Compile Include="Demandeurs.Designer.cs">
       <DependentUpon>Demandeurs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="form1.Designer.cs">
+      <DependentUpon>form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Liste_devis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liste_devis.Designer.cs">
+      <DependentUpon>Liste_devis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="liste_commande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="liste_commande.Designer.cs">
+      <DependentUpon>liste_commande.cs</DependentUpon>
     </Compile>
     <Compile Include="gestion_admin.cs">
       <SubType>Form</SubType>
@@ -98,11 +110,17 @@
     <EmbeddedResource Include="Demandeurs.resx">
       <DependentUpon>Demandeurs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="form1.resx">
+      <DependentUpon>form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Liste_devis.resx">
+      <DependentUpon>Liste_devis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="gestion_admin.resx">
       <DependentUpon>gestion_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="liste_commande.resx">
+      <DependentUpon>liste_commande.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="liste_demandes.resx">
       <DependentUpon>liste_demandes.cs</DependentUpon>

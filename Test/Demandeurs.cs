@@ -44,5 +44,10 @@ namespace Test
             }
             catch { MessageBox.Show("Erreur","Error", MessageBoxButtons.OKCancel,MessageBoxIcon.Error); }
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
