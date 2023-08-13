@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Test
 {
-    public partial class Admin_login : Form
+    public partial class User_Login : Form
     {
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-2G3VOJ3;Initial Catalog=db;Integrated Security=True");
-        public Admin_login()
+        public User_Login()
         {
             InitializeComponent();
         }

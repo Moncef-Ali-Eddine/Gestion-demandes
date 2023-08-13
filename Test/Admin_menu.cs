@@ -19,7 +19,7 @@ namespace Test
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var admin_log = new Admin_login();
+            var admin_log = new User_Login();
             admin_log.Show();
             this.Hide();
         }
@@ -33,7 +33,7 @@ namespace Test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var gestion_admin = new gestion_admin();
+            var gestion_admin = new gestion_user();
             gestion_admin.Show();
             this.Hide();
         }
@@ -51,6 +51,11 @@ namespace Test
         private void label4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

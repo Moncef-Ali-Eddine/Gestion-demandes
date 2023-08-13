@@ -34,7 +34,7 @@ namespace Test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var admin_log = new Admin_login();
+            var admin_log = new User_Login();
             admin_log.Show();
             this.Hide();
         }

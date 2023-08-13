@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin_login.cs">
+    <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin_login.Designer.cs">
-      <DependentUpon>Admin_login.cs</DependentUpon>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fournisseur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fournisseur.Designer.cs">
+      <DependentUpon>Fournisseur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Login.Designer.cs">
+      <DependentUpon>User_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin_menu.cs">
       <SubType>Form</SubType>
@@ -75,23 +87,23 @@
     <Compile Include="form1.Designer.cs">
       <DependentUpon>form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Liste_devis.cs">
+    <Compile Include="devis.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Liste_devis.Designer.cs">
-      <DependentUpon>Liste_devis.cs</DependentUpon>
+    <Compile Include="devis.Designer.cs">
+      <DependentUpon>devis.cs</DependentUpon>
     </Compile>
-    <Compile Include="liste_commande.cs">
+    <Compile Include="commander.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="liste_commande.Designer.cs">
-      <DependentUpon>liste_commande.cs</DependentUpon>
+    <Compile Include="commander.Designer.cs">
+      <DependentUpon>commander.cs</DependentUpon>
     </Compile>
-    <Compile Include="gestion_admin.cs">
+    <Compile Include="gestion_user.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="gestion_admin.Designer.cs">
-      <DependentUpon>gestion_admin.cs</DependentUpon>
+    <Compile Include="gestion_user.Designer.cs">
+      <DependentUpon>gestion_user.cs</DependentUpon>
     </Compile>
     <Compile Include="liste_demandes.cs">
       <SubType>Form</SubType>
@@ -101,8 +113,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Admin_login.resx">
-      <DependentUpon>Admin_login.cs</DependentUpon>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fournisseur.resx">
+      <DependentUpon>Fournisseur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Login.resx">
+      <DependentUpon>User_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_menu.resx">
       <DependentUpon>Admin_menu.cs</DependentUpon>
@@ -113,14 +131,14 @@
     <EmbeddedResource Include="form1.resx">
       <DependentUpon>form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Liste_devis.resx">
-      <DependentUpon>Liste_devis.cs</DependentUpon>
+    <EmbeddedResource Include="devis.resx">
+      <DependentUpon>devis.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="gestion_admin.resx">
-      <DependentUpon>gestion_admin.cs</DependentUpon>
+    <EmbeddedResource Include="gestion_user.resx">
+      <DependentUpon>gestion_user.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="liste_commande.resx">
-      <DependentUpon>liste_commande.cs</DependentUpon>
+    <EmbeddedResource Include="commander.resx">
+      <DependentUpon>commander.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="liste_demandes.resx">
       <DependentUpon>liste_demandes.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace Test
 {
-    partial class Admin_login
+    partial class User_Login
     {
         /// <summary>
         /// Required designer variable.
@@ -114,9 +114,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
             this.label3.Location = new System.Drawing.Point(321, 81);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(193, 40);
+            this.label3.Size = new System.Drawing.Size(164, 40);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Admin Login";
+            this.label3.Text = "User Login";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 

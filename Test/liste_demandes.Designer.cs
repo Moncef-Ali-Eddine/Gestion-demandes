@@ -99,7 +99,7 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(743, 9);
+            this.label4.Location = new System.Drawing.Point(769, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(19, 21);
             this.label4.TabIndex = 14;
@@ -131,7 +131,7 @@
             this.panel2.Controls.Add(this.comboBox2);
             this.panel2.Location = new System.Drawing.Point(-3, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(144, 443);
+            this.panel2.Size = new System.Drawing.Size(144, 452);
             this.panel2.TabIndex = 17;
             // 
             // pictureBox1
@@ -215,7 +215,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(109, 38);
             this.button7.TabIndex = 17;
-            this.button7.Text = "Commandes";
+            this.button7.Text = "Commander";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
@@ -265,7 +265,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(124, 40);
             this.button8.TabIndex = 18;
-            this.button8.Text = "Annuler";
+            this.button8.Text = "Supprimer";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -274,7 +274,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(774, 442);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

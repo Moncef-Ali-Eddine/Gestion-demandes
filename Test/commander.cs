@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Test
 {
-    public partial class liste_commande : Form
+    public partial class commander : Form
     {
-        public liste_commande()
+        public commander()
         {
             InitializeComponent();
         }
