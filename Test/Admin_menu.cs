@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Test
 {
-    public partial class Admin_menu : Form
+    public partial class Admin_menu : System.Windows.Forms.Form
     {
         public Admin_menu()
         {

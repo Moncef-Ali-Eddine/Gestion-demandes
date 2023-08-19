@@ -21,7 +21,7 @@ namespace Test
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var main_form = new Form1();
+            var main_form = new Receptionist();
             main_form.Show();
             this.Hide();
         }

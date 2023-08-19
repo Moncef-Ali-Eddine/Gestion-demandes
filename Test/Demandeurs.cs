@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Test
 {
-    public partial class Demandeurs : Form
+    public partial class Demandeurs : System.Windows.Forms.Form
     {
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-2G3VOJ3;Initial Catalog=db;Integrated Security=True");
         public Demandeurs()

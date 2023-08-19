@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Test
 {
-    public partial class Fournisseur : Form
+    public partial class Fournisseur : System.Windows.Forms.Form
     {
         public Fournisseur()
         {

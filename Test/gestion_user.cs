@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Test
 {
-    public partial class gestion_user : Form
+    public partial class gestion_user : System.Windows.Forms.Form
     {
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-2G3VOJ3;Initial Catalog=db;Integrated Security=True");
         public gestion_user()
