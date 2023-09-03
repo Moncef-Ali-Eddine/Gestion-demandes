@@ -66,7 +66,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(118, 32);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Retour";
+            this.button2.Text = "Quitter";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -134,7 +134,7 @@
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // Admin_login
+            // User_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -151,7 +151,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Admin_login";
+            this.Name = "User_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MedExpert Gestion";
             this.Load += new System.EventHandler(this.Admin_login_Load);

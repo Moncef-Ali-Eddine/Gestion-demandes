@@ -21,8 +21,8 @@ namespace Test
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var main_form = new User_Login();
-            main_form.Show();
+            var gestion_admin = new User_Login();
+            gestion_admin.Show();
             this.Hide();
         }
 

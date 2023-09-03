@@ -42,7 +42,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -82,12 +81,13 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
-            this.button5.Location = new System.Drawing.Point(15, 352);
+            this.button5.Location = new System.Drawing.Point(12, 400);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(109, 38);
             this.button5.TabIndex = 20;
             this.button5.Text = "Retour";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -102,6 +102,7 @@
             this.button4.TabIndex = 19;
             this.button4.Text = "Se deconnecter";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -232,21 +233,6 @@
             this.radioButton1.Text = "Commande Diviser :";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
-            this.button2.Location = new System.Drawing.Point(600, 375);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 40);
-            this.button2.TabIndex = 38;
-            this.button2.Text = "Retour ";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
@@ -254,7 +240,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
-            this.button1.Location = new System.Drawing.Point(181, 375);
+            this.button1.Location = new System.Drawing.Point(286, 383);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 40);
             this.button1.TabIndex = 37;
@@ -413,7 +399,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
-            this.button8.Location = new System.Drawing.Point(399, 375);
+            this.button8.Location = new System.Drawing.Point(504, 383);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(124, 40);
             this.button8.TabIndex = 41;
@@ -441,7 +427,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboBox1);
@@ -477,7 +462,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;

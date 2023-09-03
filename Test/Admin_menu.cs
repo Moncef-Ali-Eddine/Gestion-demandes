@@ -57,5 +57,19 @@ namespace Test
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var gestion_admin = new Article();
+            gestion_admin.Show();
+            this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var gestion_admin = new Fournisseur();
+            gestion_admin.Show();
+            this.Hide();
+        }
     }
 }

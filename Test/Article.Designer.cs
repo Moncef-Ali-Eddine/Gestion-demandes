@@ -118,6 +118,7 @@
             this.button5.TabIndex = 9;
             this.button5.Text = "Retour";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button1
             // 
@@ -221,7 +222,7 @@
             this.txt_name.Size = new System.Drawing.Size(107, 20);
             this.txt_name.TabIndex = 18;
             // 
-            // Form2
+            // Article
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -238,7 +239,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_name);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form2";
+            this.Name = "Article";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.panel1.ResumeLayout(false);

@@ -122,6 +122,7 @@
             this.button4.TabIndex = 9;
             this.button4.Text = "Gestion des Articles";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -136,6 +137,7 @@
             this.button5.TabIndex = 10;
             this.button5.Text = "Gestion des Fournisseurs";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Admin_menu
             // 

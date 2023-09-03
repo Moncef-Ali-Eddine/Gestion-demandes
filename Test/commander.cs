@@ -38,5 +38,19 @@ namespace Test
             retour.Show();
             this.Hide();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var gestion_admin = new Admin_menu();
+            gestion_admin.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var gestion_admin = new Admin_menu();
+            gestion_admin.Show();
+            this.Hide();
+        }
     }
 }

@@ -350,12 +350,13 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
-            this.button5.Location = new System.Drawing.Point(15, 352);
+            this.button5.Location = new System.Drawing.Point(15, 400);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(109, 38);
             this.button5.TabIndex = 20;
             this.button5.Text = "Retour";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel2
             // 

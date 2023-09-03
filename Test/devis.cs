@@ -16,5 +16,12 @@ namespace Test
         {
             InitializeComponent();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var gestion_admin = new Admin_menu();
+            gestion_admin.Show();
+            this.Hide();
+        }
     }
 }
