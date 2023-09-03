@@ -31,5 +31,12 @@ namespace Test
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var retour = new Article();
+            retour.Show();
+            this.Hide();
+        }
     }
 }
