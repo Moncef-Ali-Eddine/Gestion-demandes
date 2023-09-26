@@ -13,7 +13,7 @@ namespace Test
 {
     public partial class gestion_user : System.Windows.Forms.Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-2G3VOJ3;Initial Catalog=db;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-2G3VOJ3;Initial Catalog=db_Medexp;Integrated Security=True");
         public gestion_user()
         {
             InitializeComponent();
@@ -21,18 +21,20 @@ namespace Test
 
         private void button1_Click(object sender, EventArgs e)
         {
+        
             try
             {
-                string req = "insert into admin_log values('" + txt_name.Text + "','" + txt_pass.Text + "')";
+                string req = "insert into users values('" + txt_name.Text + "','" + txt_pass.Text + "','" + comboBox1.SelectedItem.ToString() + "')";
                 SqlCommand cmd = new SqlCommand(req, con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("ajout avec succes");
+                loadData();
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("erreur l'ajout à echoué");
+                MessageBox.Show("Erreur : " + ex.Message);
             }
         }
 
@@ -42,16 +44,17 @@ namespace Test
             {
                 try
                 {
-                    string req = "delete from admin_log where nom_utilisateur=" + txt_name.Text;
+                    string req = "delete from users where user_login='" + txt_name.Text+"'";
                     SqlCommand cmd = new SqlCommand(req, con);
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("suppression avec succes");
+                    loadData();
                 }
-                catch
+                catch (Exception ex)
                 {
-                    MessageBox.Show("erreur la ssuppression à echoué");
+                    MessageBox.Show("Erreur : " + ex.Message);
                 }
             }
         }
@@ -62,23 +65,21 @@ namespace Test
             {
                 try
                 {
-                    //boutton modifier
 
-                    string req = ("update admin_log set password=@p1 where nom_utilisateur=@id");
+                    string req = ("update users set password=@p1,user_role=@p2 where user_login=@id");
                     SqlCommand cmd = new SqlCommand(req, con);
-                    // les demandes sont toujours avant le con.open
                     cmd.Parameters.AddWithValue("@p1", txt_pass.Text.ToString());
                     cmd.Parameters.AddWithValue("@id", txt_name.Text.ToString());
+                    cmd.Parameters.AddWithValue("@p2", comboBox1.SelectedItem.ToString());
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
-                    MessageBox.Show("Mise a jour avec succes");
+                    MessageBox.Show("Mise a jour a etait effectuer avec succès");
+                    loadData();
                 }
-                catch
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Erreur", "Erreur");
-
-
+                    MessageBox.Show("Erreur : " + ex.Message);
                 }
             }
         }
@@ -143,6 +144,25 @@ namespace Test
             var gestion_admin = new Admin_menu();
             gestion_admin.Show();
             this.Hide();
+        }
+        private void loadData()
+        {
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            string req = "select * from users";
+            con.Open();
+            SqlCommand cmd = new SqlCommand(req, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataTable t = new DataTable();
+            t.Load(dr);
+            dataGridView.DataSource = t;
+            dr.Close();
+            con.Close();
+        }
+        private void gestion_user_Load(object sender, EventArgs e)
+        {
+            loadData();
+
+
         }
     }
 }

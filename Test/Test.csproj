@@ -52,6 +52,11 @@
     <Compile Include="Article.Designer.cs">
       <DependentUpon>Article.cs</DependentUpon>
     </Compile>
+    <Compile Include="db_MedexpDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_MedexpDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Fournisseur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +167,17 @@
     </None>
     <None Include="dbDataSet.xss">
       <DependentUpon>dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_MedexpDataSet.xsc">
+      <DependentUpon>db_MedexpDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_MedexpDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_MedexpDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_MedexpDataSet.xss">
+      <DependentUpon>db_MedexpDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

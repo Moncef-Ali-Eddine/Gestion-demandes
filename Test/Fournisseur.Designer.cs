@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fournisseur));
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,9 +43,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.db_MedexpDataSet = new Test.db_MedexpDataSet();
+            this.dbMedexpDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_MedexpDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbMedexpDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView
@@ -69,6 +74,7 @@
             this.label4.TabIndex = 28;
             this.label4.Text = "x";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -86,7 +92,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
-            this.label1.Location = new System.Drawing.Point(205, 91);
+            this.label1.Location = new System.Drawing.Point(186, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 15);
             this.label1.TabIndex = 19;
@@ -94,10 +100,11 @@
             // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(336, 89);
+            this.txt_name.Location = new System.Drawing.Point(314, 89);
             this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(107, 20);
+            this.txt_name.Size = new System.Drawing.Size(125, 20);
             this.txt_name.TabIndex = 18;
+            this.txt_name.TextChanged += new System.EventHandler(this.txt_name_TextChanged);
             // 
             // panel1
             // 
@@ -150,6 +157,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Ajouter";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -164,6 +172,7 @@
             this.button3.TabIndex = 7;
             this.button3.Text = "Supprimer";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -178,13 +187,14 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Modifier";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
-            this.label2.Location = new System.Drawing.Point(479, 91);
+            this.label2.Location = new System.Drawing.Point(445, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 15);
             this.label2.TabIndex = 34;
@@ -194,13 +204,51 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Tous",
-            "Approuvé",
-            "Non-approuvé"});
-            this.comboBox1.Location = new System.Drawing.Point(564, 89);
+            "Dispositifs médicaux généraux",
+            "Produits pharmaceutiques génériques",
+            "Équipement de diagnostic",
+            "Produits de soins de la peau",
+            "Produits de soins capillaires",
+            "Produits d\'hygiène buccale",
+            "Dispositifs de mobilité (béquilles, fauteuils roulants, etc.)",
+            "Produits de désinfection et d\'assainissement",
+            "Produits de nutrition clinique",
+            "Fournitures médicales jetables",
+            "Équipement de laboratoire médical",
+            "Instruments chirurgicaux",
+            "Produits d\'orthopédie et de prothèses",
+            "Produits pour la santé mentale",
+            "Produits de réadaptation et de physiothérapie",
+            "Fournitures pour soins infirmiers à domicile",
+            "Produits de soins oculaires",
+            "Fournitures de diagnostic cardiaque",
+            "Produits de contrôle de la glycémie",
+            "Produits de soins de plaies",
+            "Produits d\'hygiène féminine",
+            "Équipement de radiologie",
+            "Produits de diagnostic de la fertilité",
+            "Produits de protection contre les infections",
+            "Produits de soins respiratoires",
+            "Produits de soins pédiatriques",
+            "Produits de prévention des allergies",
+            "Produits de diagnostic de l\'allergie",
+            "Produits de rééducation",
+            "Produits de gestion de la douleur"});
+            this.comboBox1.Location = new System.Drawing.Point(530, 89);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(114, 21);
+            this.comboBox1.Size = new System.Drawing.Size(191, 21);
             this.comboBox1.TabIndex = 35;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // db_MedexpDataSet
+            // 
+            this.db_MedexpDataSet.DataSetName = "db_MedexpDataSet";
+            this.db_MedexpDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dbMedexpDataSetBindingSource
+            // 
+            this.dbMedexpDataSetBindingSource.DataSource = this.db_MedexpDataSet;
+            this.dbMedexpDataSetBindingSource.Position = 0;
             // 
             // Fournisseur
             // 
@@ -219,9 +267,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Fournisseur";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Fournisseur_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_MedexpDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbMedexpDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +292,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
+        private db_MedexpDataSet db_MedexpDataSet;
+        private System.Windows.Forms.BindingSource dbMedexpDataSetBindingSource;
     }
 }

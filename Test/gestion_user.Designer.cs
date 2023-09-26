@@ -214,9 +214,8 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Tous",
-            "Approuvé",
-            "Non-approuvé"});
+            "admin",
+            "demandeur"});
             this.comboBox1.Location = new System.Drawing.Point(682, 91);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(96, 21);
@@ -257,6 +256,7 @@
             this.Name = "gestion_user";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "gestion_admin";
+            this.Load += new System.EventHandler(this.gestion_user_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
