@@ -52,6 +52,12 @@
     <Compile Include="Article.Designer.cs">
       <DependentUpon>Article.cs</DependentUpon>
     </Compile>
+    <Compile Include="categories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="categories.Designer.cs">
+      <DependentUpon>categories.cs</DependentUpon>
+    </Compile>
     <Compile Include="db_MedexpDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -120,6 +126,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Article.resx">
       <DependentUpon>Article.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="categories.resx">
+      <DependentUpon>categories.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fournisseur.resx">
       <DependentUpon>Fournisseur.cs</DependentUpon>

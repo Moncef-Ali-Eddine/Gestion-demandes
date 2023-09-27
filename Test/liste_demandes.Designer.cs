@@ -254,9 +254,9 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
             this.label5.Location = new System.Drawing.Point(354, 62);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(200, 17);
+            this.label5.Size = new System.Drawing.Size(204, 17);
             this.label5.TabIndex = 37;
-            this.label5.Text = "référence de la demande :";
+            this.label5.Text = "Référence de la demande :";
             // 
             // liste_demandes
             // 
