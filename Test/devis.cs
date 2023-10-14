@@ -23,5 +23,19 @@ namespace Test
             gestion_admin.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var list_demande = new liste_demandes();
+            list_demande.Show();
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            var commander = new commander();
+            commander.Show();
+            this.Hide();
+        }
     }
 }

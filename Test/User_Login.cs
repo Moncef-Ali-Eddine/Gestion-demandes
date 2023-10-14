@@ -59,6 +59,12 @@ namespace Test
                         demandeur.Show();
                         this.Hide();
                     }
+                    else if (role == "Receptionist")
+                    {
+                        var Receptionist = new Receptionist();
+                        Receptionist.Show();
+                        this.Hide();
+                    }
                 }
                 else
                 {

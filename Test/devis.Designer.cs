@@ -300,6 +300,7 @@
             this.button7.TabIndex = 17;
             this.button7.Text = "Commander";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -328,6 +329,7 @@
             this.button3.TabIndex = 16;
             this.button3.Text = "Demandes";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
