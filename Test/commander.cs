@@ -64,7 +64,12 @@ namespace Test
         {
             var devis = new devis();
             devis.Show();
-            this.Hide()
+            this.Hide();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

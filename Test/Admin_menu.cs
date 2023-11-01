@@ -33,8 +33,8 @@ namespace Test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var gestion_admin = new gestion_user();
-            gestion_admin.Show();
+            var gestion_user = new gestion_user();
+            gestion_user.Show();
             this.Hide();
         }
 
@@ -68,6 +68,13 @@ namespace Test
         private void button5_Click(object sender, EventArgs e)
         {
             var gestion_admin = new Fournisseur();
+            gestion_admin.Show();
+            this.Hide();
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            var gestion_admin = new categories();
             gestion_admin.Show();
             this.Hide();
         }

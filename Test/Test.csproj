@@ -69,6 +69,18 @@
     <Compile Include="Fournisseur.Designer.cs">
       <DependentUpon>Fournisseur.cs</DependentUpon>
     </Compile>
+    <Compile Include="gestion_utilisateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gestion_utilisateur.Designer.cs">
+      <DependentUpon>gestion_utilisateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print.Designer.cs">
+      <DependentUpon>Print.cs</DependentUpon>
+    </Compile>
     <Compile Include="Receptionist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,12 +122,6 @@
     <Compile Include="commander.Designer.cs">
       <DependentUpon>commander.cs</DependentUpon>
     </Compile>
-    <Compile Include="gestion_user.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="gestion_user.Designer.cs">
-      <DependentUpon>gestion_user.cs</DependentUpon>
-    </Compile>
     <Compile Include="liste_demandes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,12 @@
     <EmbeddedResource Include="Fournisseur.resx">
       <DependentUpon>Fournisseur.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="gestion_utilisateur.resx">
+      <DependentUpon>gestion_utilisateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print.resx">
+      <DependentUpon>Print.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Receptionist.resx">
       <DependentUpon>Receptionist.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,9 +159,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="devis.resx">
       <DependentUpon>devis.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="gestion_user.resx">
-      <DependentUpon>gestion_user.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="commander.resx">
       <DependentUpon>commander.cs</DependentUpon>

@@ -50,7 +50,7 @@ namespace Test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string req = "update demande set etat='confirmer' where reference=@id";
+            string req = "update demande set etat='confirmée' where reference=@id";
 
             if (con.State == ConnectionState.Closed)
             {

@@ -186,6 +186,7 @@
             this.label4.TabIndex = 22;
             this.label4.Text = "x";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label8
             // 
@@ -410,6 +411,7 @@
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "commander";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.liste_commande_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

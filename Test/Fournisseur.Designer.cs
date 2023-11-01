@@ -266,6 +266,7 @@
             this.Controls.Add(this.txt_name);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Fournisseur";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Fournisseur_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();

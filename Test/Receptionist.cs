@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -79,8 +80,8 @@ namespace Test
         private void Receptionist_Load(object sender, EventArgs e)
         {
             
-            checkBox1.Checked = true;
-            textBox1.Enabled = true;
+            checkBox1.Checked = false;
+            textBox1.Enabled = false;
             loadData();
             loadCombo();
         
@@ -153,55 +154,58 @@ namespace Test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (checkBox2.Checked)
-            {
-                string req = ("update demande set etat='commande recu' where reference ='" + comboBox1.SelectedItem.ToString() + "'");
-                using (SqlCommand cmd = new SqlCommand(req, con))
+           
+                if (checkBox2.Checked)
                 {
-
-                    int rowsAffected = cmd.ExecuteNonQuery();
-
-                    if (rowsAffected > 0)
+                    string req = ("update demande set etat='commande recu' where reference ='" + comboBox1.SelectedItem.ToString() + "'");
+                    using (SqlCommand cmd = new SqlCommand(req, con))
                     {
-                        MessageBox.Show("modifier avec success.");
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("echec lors de la modif");
-                    }
-                    loadData();
-                }
-            }
-            string req2 = "SELECT prix as price " +
-                "FROM article a " +
-                "JOIN demande d ON a.article = d.article " +
-                "WHERE reference = @selectedItem";
-            using (SqlCommand command = new SqlCommand(req2, con))
-            {
-                // Assuming comboBox1.SelectedItem.ToString() contains the reference value
-                command.Parameters.AddWithValue("@selectedItem", comboBox1.SelectedItem.ToString());
+                        int rowsAffected = cmd.ExecuteNonQuery();
 
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("modifier avec success.");
 
-
-                // Assuming you want to execute a query and get a result back
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        // Assuming label3 is a label where you want to display the result
-                        int prix = int.Parse( reader["price"].ToString());
-                        int quantity =int.Parse( textBox1.Text);
-                        int deviOri = int.Parse(label3.Text);
-                        int result = deviOri-(prix * quantity);
-                        label9.Text = result.ToString();
-                        int deviNv = int.Parse(label9.Text);
-                        int finalresult = deviOri - deviNv;
-                        label6.Text = finalresult.ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("echec lors de la modif");
+                        }
+                        loadData();
                     }
                 }
+           
+                string req2 = "SELECT prix as price " +
+                    "FROM article a " +
+                    "JOIN demande d ON a.article = d.article " +
+                    "WHERE reference = @selectedItem";
+                using (SqlCommand command = new SqlCommand(req2, con))
+                {
+                    // Assuming comboBox1.SelectedItem.ToString() contains the reference value
+                    command.Parameters.AddWithValue("@selectedItem", comboBox1.SelectedItem.ToString());
 
-            }
+
+
+                    // Assuming you want to execute a query and get a result back
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Assuming label3 is a label where you want to display the result
+                            int prix = int.Parse(reader["price"].ToString());
+                            int quantity = int.Parse(textBox1.Text);
+                            int deviOri = int.Parse(label3.Text);
+                            int result = deviOri - (prix * quantity);
+                            label9.Text = result.ToString();
+                            int deviNv = int.Parse(label9.Text);
+                            int finalresult = deviOri - deviNv;
+                            label6.Text = finalresult.ToString();
+                        }
+                    }
+
+                }
+          
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -212,6 +216,11 @@ namespace Test
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

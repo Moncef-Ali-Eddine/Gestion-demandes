@@ -80,9 +80,9 @@
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(249)))));
             this.button1.Location = new System.Drawing.Point(174, 381);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 32);
+            this.button1.Size = new System.Drawing.Size(174, 32);
             this.button1.TabIndex = 10;
-            this.button1.Text = "Confirmer";
+            this.button1.Text = "Envoyer la demande.";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
